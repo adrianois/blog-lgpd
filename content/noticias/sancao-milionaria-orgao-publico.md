@@ -71,7 +71,7 @@ A decisão tem impacto direto sobre os demais municípios brasileiros por vária
 - **Publicização como desincentivo:** A divulgação do nome do município é, em muitos casos, mais impactante politicamente do que a multa. Gestores atentos vão notar.
 
 > 💡 **O que fazer agora se você gerencia um município**  
-> Se sua câmara ou prefeitura ainda não tem DPO nomeado, política de proteção de dados e contratos LGPD com fornecedores de TI, esses são os três primeiros passos. Consulte o [roteiro de adequação para câmaras municipais](camara-municipal-baixo-orcamento.md) publicado neste blog e os materiais gratuitos disponíveis na [Central de Downloads](downloads.html).
+> Se sua câmara ou prefeitura ainda não tem DPO nomeado, política de proteção de dados e contratos LGPD com fornecedores de TI, esses são os três primeiros passos. Consulte o [roteiro de adequação para câmaras municipais](artigo.html?file=/blog-lgpd/content/artigos/camara-municipal-baixo-orcamento.md) publicado neste blog e os materiais gratuitos disponíveis na [Central de Downloads](downloads.html).
 
 ## Conclusão: o setor público não está imune
 
