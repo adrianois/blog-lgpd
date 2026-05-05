@@ -1,52 +1,99 @@
-# Jurisprudência & Notícias
+# ANPD aplica primeira sanção milionária a órgão público por vazamento de dados de servidores
 
-Decisões da ANPD, tribunais, novas regulamentações e o que muda na prática da proteção de dados.
+A Autoridade Nacional de Proteção de Dados concluiu investigação e aplicou multa inédita a prefeitura que deixou exposto banco de dados com informações pessoais de 12 mil servidores. Decisão histórica que sinaliza endurecimento da fiscalização sobre o setor público municipal.
 
-## Últimas da ANPD
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 03 maio 2025 · ⏱ 8 min de leitura  
+⚖ Sanção · Setor Público
 
-### 🔴 Sanção: ANPD aplica primeira sanção milionária a órgão público por vazamento de dados
-Prefeitura multada após exposição de banco de dados com informações de 12 mil servidores. Decisão histórica que sinaliza endurecimento da fiscalização.
+Em decisão inédita no Brasil, a **Autoridade Nacional de Proteção de Dados (ANPD) aplicou sanção administrativa milionária a um município brasileiro** por violação à Lei Geral de Proteção de Dados. O caso, que tramitou por quase dois anos no processo administrativo sancionador da autoridade, envolve a exposição não autorizada de um banco de dados com informações pessoais de aproximadamente 12 mil servidores municipais ativos e inativos.
 
-*03/05/2025* - [Ler mais](#)
+A decisão, publicada no Diário Oficial da União, representa um marco no histórico de atuação da ANPD e estabelece precedente significativo para os cerca de 5.570 municípios brasileiros que, em sua maioria, ainda não iniciaram o processo de adequação à LGPD.
 
-### 📜 Resolução: Resolução CD/ANPD nº 19: Novas regras sobre uso de cookies e rastreamento
-A ANPD publicou orientações complementares sobre bases legais para uso de cookies analíticos e de publicidade direcionada.
+| Valor da multa aplicada | Servidores afetados | Duração do processo |
+|-------------------------|---------------------|---------------------|
+| R$ 1,2M                | 12 mil             | 23 meses           |
 
-*28/04/2025* - [Ler mais](#)
+## O caso: o que aconteceu
 
-### 🏛 Setor Público: ANPD publica guia para adequação de municípios com menos de 50 mil habitantes
-Documento traz metodologia simplificada para pequenos municípios se adequarem à LGPD com recursos limitados.
+O incidente foi identificado por pesquisadores de segurança que encontraram um banco de dados de acesso público na internet contendo informações de servidores municipais. Os dados expostos incluíam **nome completo, CPF, data de nascimento, matrícula funcional, dados bancários para pagamento de salário, histórico de férias e licenças, e registros de avaliação de desempenho** — alguns dos quais configuravam dados sensíveis nos termos do art. 5º, II da LGPD.
 
-*20/04/2025* - [Ler mais](#)
+A exposição teria ocorrido por falha de configuração em um servidor de banco de dados durante uma migração de sistemas, deixando o banco de dados acessível sem autenticação por um período estimado de quatro meses. Nesse intervalo, não há como determinar com certeza quantos terceiros acessaram ou copiaram os dados.
 
-### 👤 Titular: STJ firma entendimento sobre danos morais em vazamento de dados pessoais
-Superior Tribunal de Justiça consolida que vazamento de dados sensíveis gera dano moral in re ipsa, sem necessidade de comprovação de prejuízo.
+> ⚠ **Dados expostos no caso**  
+> Além de dados comuns (nome, CPF, matrícula), o banco de dados continha registros de afastamentos por razões de saúde, o que configura exposição de **dados sensíveis de saúde** — categoria que recebe proteção reforçada pela LGPD e exige base legal específica para tratamento (art. 11).
 
-*15/04/2025* - [Ler mais](#)
+## As infrações identificadas pela ANPD
 
-### 📊 Regulação: Regulamento de Comunicação de Incidentes: prazo de 72h é confirmado
-ANPD regulamenta definitivamente o prazo de comunicação de incidentes graves, alinhando o Brasil ao GDPR europeu.
+O processo administrativo sancionador identificou múltiplas infrações ao longo da investigação:
 
-*10/04/2025* - [Ler mais](#)
+- **Ausência de medidas de segurança técnicas e administrativas** adequadas (art. 46 da LGPD) — o banco de dados estava sem autenticação, sem criptografia e sem monitoramento de acessos
+- **Falta de comunicação tempestiva do incidente** à ANPD e aos titulares afetados (art. 48) — o município levou mais de 60 dias para comunicar o incidente após tomar ciência
+- **Ausência de Encarregado de Proteção de Dados (DPO)** formalmente nomeado (art. 41) — o município não havia designado responsável até a data do incidente
+- **Coleta e retenção excessiva de dados** (violação ao princípio da necessidade, art. 6º, III) — dados de servidores já desligados há mais de 10 anos permaneciam no banco de dados sem critério de descarte definido
+- **Ausência de Política de Proteção de Dados** e de contratos com cláusulas LGPD com o fornecedor do sistema
 
-### 🔐 Segurança: Ataque de ransomware expõe dados de 400 mil pacientes em hospital federal
-Incidente de segurança compromete prontuários eletrônicos e acende alerta para o setor de saúde. O que os gestores precisam fazer agora.
+## A decisão e as sanções aplicadas
 
-*05/04/2025* - [Ler mais](#)
+A ANPD aplicou um conjunto de sanções conforme previsto no art. 52 da LGPD:
 
-## Análise de Decisões
+- **Multa simples** no valor de R$ 1,2 milhão — calculada com base no faturamento (receita corrente líquida) do município e no grau de culpa apurado
+- **Publicização da infração** — a decisão foi divulgada com identificação do município no site da ANPD e publicada no DOU
+- **Bloqueio temporário dos dados** do banco afetado até implementação das medidas corretivas determinadas
+- **Determinação de adequação** em 180 dias, com obrigação de: nomear DPO, elaborar Política de Proteção de Dados, firmar contratos LGPD com todos os fornecedores de TI e implementar criptografia nos sistemas que tratam dados de servidores
 
-### Análise: O que muda com a Resolução de Cookies da ANPD para os municípios
-Análise prática do impacto nas páginas institucionais de prefeituras e câmaras municipais que utilizam ferramentas de análise de tráfego.
+> **Agravantes considerados pela ANPD:** A gravidade da infração foi agravada pela presença de dados sensíveis (histórico de saúde), pelo volume elevado de titulares afetados (12 mil), pela duração da exposição (4 meses) e pela ausência de qualquer programa de conformidade com a LGPD no município — o que demonstrou negligência sistemática, não apenas uma falha pontual.
 
-*Adriano Israel* - [Ler mais](#)
+## Cronologia do processo
 
-### Análise: LAI e LGPD: análise de 5 acórdãos recentes do TCU sobre transparência e privacidade
-Como os tribunais têm equilibrado o direito à informação pública com a proteção de dados pessoais de servidores e terceiros.
+- **Jun 2023** - Incidente identificado por pesquisadores  
+  Banco de dados exposto é descoberto por pesquisadores de segurança e comunicado ao município.
 
-*Adriano Israel* - [Ler mais](#)
+- **Ago 2023** - Comunicação tardia à ANPD  
+  Município comunica o incidente à ANPD com mais de 60 dias de atraso, configurando infração autônoma.
 
-### Análise: Responsabilidade solidária em condomínios: o que dizem as primeiras decisões
-Casos de câmeras de segurança e compartilhamento de dados de moradores chegam ao judiciário. Leia os precedentes.
+- **Set 2023** - Abertura do Processo Administrativo Sancionador  
+  ANPD instaura formalmente o PAS e notifica o município para apresentação de defesa.
 
-*Adriano Israel* - [Ler mais](#)
+- **Mar 2024** - Fase de instrução e perícia  
+  Peritos da ANPD realizam análise técnica dos sistemas e do banco de dados afetado.
+
+- **Mai 2025** - Decisão final publicada  
+  ANPD publica decisão com aplicação de multa de R$ 1,2 milhão e determinação de medidas corretivas.
+
+## Implicações para outros municípios
+
+A decisão tem impacto direto sobre os demais municípios brasileiros por várias razões:
+
+- **Precedente de responsabilização pública:** Encerra a dúvida sobre se a ANPD efetivamente sanciona entes públicos municipais. Sim, sanciona.
+- **Critérios de dosimetria revelados:** A fundamentação da decisão detalha os critérios usados para calcular a multa, permitindo que outros municípios avaliem sua própria exposição ao risco.
+- **Lista de infrações como checklist invertido:** As infrações identificadas no caso são um espelho do que todos os municípios devem corrigir — DPO, política, contratos, criptografia, comunicação de incidentes.
+- **Publicização como desincentivo:** A divulgação do nome do município é, em muitos casos, mais impactante politicamente do que a multa. Gestores atentos vão notar.
+
+> 💡 **O que fazer agora se você gerencia um município**  
+> Se sua câmara ou prefeitura ainda não tem DPO nomeado, política de proteção de dados e contratos LGPD com fornecedores de TI, esses são os três primeiros passos. Consulte o [roteiro de adequação para câmaras municipais](camara-municipal-baixo-orcamento.html) publicado neste blog e os materiais gratuitos disponíveis na [Central de Downloads](downloads.html).
+
+## Conclusão: o setor público não está imune
+
+Durante anos, circulou no setor público a percepção informal de que a ANPD priorizaria empresas privadas nas sanções e que órgãos públicos estariam, na prática, protegidos pela lentidão burocrática dos processos administrativos. Esta decisão desfaz definitivamente essa percepção.
+
+A ANPD mostrou que tem instrumentos, vontade técnica e fundamento legal para sancionar municípios. E que o faz com transparência: publicando a decisão, identificando o infrator e detalhando os fundamentos. É uma mensagem clara para os 5.570 gestores municipais do Brasil.
+
+**Tags:** ANPD, Sanção, Setor Público, Vazamento de Dados, Multa, Processo Sancionador
+
+---
+
+**Adriano Israel**  
+Especialista em LGPD com foco em setor público. Acompanha e analisa as decisões da ANPD com foco em impacto para municípios brasileiros.  
+✉️ adriano.israel@live.com  
+📸 [@adrianoisrael7](https://instagram.com/adrianoisrael7)
+
+### Leia também
+
+- **Setor Público:** Como adequar uma Câmara Municipal com baixo orçamento  
+  Roteiro prático em 5 etapas para não ser o próximo caso de sanção.  
+  *Adriano Israel* · [Ler →](artigos/camara-municipal-baixo-orcamento.html)
+
+- **Segurança:** Guia de Criptografia para não técnicos  
+  Como garantir que seus sistemas tenham o mínimo de proteção técnica exigido.  
+  *Adriano Israel* · [Ler →](artigos/criptografia-nao-tecnicos.html)
