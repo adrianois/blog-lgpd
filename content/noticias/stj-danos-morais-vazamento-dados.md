@@ -1,19 +1,15 @@
----
-titulo: "STJ firma entendimento sobre danos morais em vazamento de dados pessoais"
-categoria: Jurisprudência & ANPD
-tags: [STJ, danos morais, vazamento, jurisprudência, indenização, responsabilidade civil]
-autor: Adriano Israel
-data: 2025-03-28
-resumo: "O Superior Tribunal de Justiça estabeleceu precedente importante: vazamento de dados pessoais gera direito automático a indenização por danos morais. Saiba como isso afeta empresas e órgãos públicos."
----
-
 # STJ firma entendimento sobre danos morais em vazamento de dados pessoais
 
-O **Superior Tribunal de Justiça (STJ)** publicou recentemente uma decisão de relevância jurídica que estabelece um novo entendimento sobre **responsabilidade civil decorrente de vazamento de dados pessoais**: a ocorrência do incidente configura presunção de danos morais, dispensando prova de prejuízo específico.
+O Superior Tribunal de Justiça estabeleceu precedente importante: vazamento de dados pessoais gera direito automático a indenização por danos morais. Saiba como isso afeta empresas e órgãos públicos.
 
-A decisão, proferida pela **Segunda Seção** do tribunal, encerra divergência entre cortes estaduais e traça uma linha clara de interpretação para casos futuros envolvendo proteção de dados.
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 28 março 2025 · ⏱ 4 min de leitura  
+⚖ Jurisprudência & ANPD
 
----
+| Tipo de vazamento | Indenização típica | Critérios |
+|-------------------|---------------------|-----------|
+| Simples | R$ 1.000 - R$ 5.000 | Quantidade, alcance |
+| Sensíveis | R$ 5.000 - R$ 15.000 | Saúde, financeiros |
 
 ## O que a decisão do STJ estabelece
 
@@ -33,8 +29,6 @@ A decisão reafirma que empresas e órgãos públicos que coletam dados são res
 ### 3. Obrigação de segurança
 O STJ enfatiza que qualquer controlador de dados pública ou privado deve manter **medidas de segurança proporcional à sensibilidade dos dados**. Negligência em cibersegurança é configurada automaticamente como fator agravante.
 
----
-
 ## Impacto prático: quem pode ser responsabilizado?
 
 ### Empresas privadas
@@ -48,8 +42,6 @@ O STJ enfatiza que qualquer controlador de dados pública ou privado deve manter
 - **Secretarias de saúde:** Exposição de registros de pacientes
 - **Centros de assistência social:** Divulgação de dados de beneficiários
 - **Polícia:** Exposição de informações de pessoas investigadas
-
----
 
 ## Quanto a indenização?
 
@@ -68,8 +60,6 @@ Baseado em decisões posteriores à jurisprudência:
 - **Vazamento de dados sensíveis:** R$ 5.000 a R$ 15.000
 - **Vazamento em massa (milhões):** R$ 50.000 a R$ 500.000 ou mais
 
----
-
 ## Consequências para controladores de dados
 
 ### 1. Exposição financeira aumentada
@@ -83,8 +73,6 @@ O custo de prevenção é muito menor que o custo de litigação em massa. Uma e
 
 ### 4. Comunicação pós-incidente
 A obrigação de notificar vítimas agora é ainda mais importante — quanto antes comunicar, menos indignação, menor indenização.
-
----
 
 ## Como se proteger?
 
@@ -104,8 +92,6 @@ A obrigação de notificar vítimas agora é ainda mais importante — quanto an
 - ✓ Segregue dados críticos em infraestrutura protegida
 - ✓ Mantenha backup seguro e teste restauração
 - ✓ Elabore plano de comunicação pós-incidente
-
----
 
 ## Referências
 

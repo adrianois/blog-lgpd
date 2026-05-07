@@ -1,19 +1,15 @@
----
-titulo: "Responsabilidade solidária em condomínios: o que dizem as primeiras decisões"
-categoria: Direito do Titular
-tags: [condomínio, responsabilidade solidária, LGPD, decisões judiciais, síndico, privacidade]
-autor: Adriano Israel
-data: 2025-03-20
-resumo: "Primeiros julgados estabelecem como condomínios são responsáveis por vazamento de dados de moradores. Síndico e condomínio responderão solidariamente? Entenda o entendimento dos tribunais."
----
-
 # Responsabilidade solidária em condomínios: o que dizem as primeiras decisões
 
-Os primeiros **julgados que envolvem condomínios e LGPD** começam a chegar aos tribunais, trazendo clareza sobre uma questão prática: quem responde quando há vazamento de dados de moradores em sistema de controle de acesso, segurança ou administrativo de um edifício?
+Primeiros julgados estabelecem como condomínios são responsáveis por vazamento de dados de moradores. Síndico e condomínio responderão solidariamente? Entenda o entendimento dos tribunais.
 
-A resposta é mais complexa que parece — e envolve a discussão sobre **responsabilidade solidária** entre o condomínio (pessoa jurídica) e pessoas físicas (síndico, zelador, gerente).
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 20 março 2025 · ⏱ 7 min de leitura  
+⚖ Direito do Titular
 
----
+| Dados coletados | Exemplos | Sensibilidade |
+|-----------------|----------|--------------|
+| Identificação | Nome, CPF | ⭐⭐⭐ |
+| Biometria | Impressão digital | ⭐⭐⭐⭐⭐ |
 
 ## O contexto: condomínios como controladores de dados
 
@@ -31,8 +27,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 | Dados de visitantes | Registro de quem entra | ⭐⭐⭐ |
 
 **Pergunta legal:** O condomínio é **responsável** por todos esses dados? A resposta é **SIM**, mediante adequação à LGPD.
-
----
 
 ## As primeiras decisões judiciais
 
@@ -59,8 +53,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 - Síndico será cobrado pelo condomínio (ação de regresso)
 
 **Princípio:** "O condomínio, ao terceirizar função de controle de dados, não se furta à responsabilidade. A delegação não é isenção."
-
----
 
 ### Decisão 2: Vazamento de Biometria (TJ-MG, 2024)
 
@@ -97,8 +89,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 > 4. Criptografia de ponta a ponta
 > 5. Responsáveis designados"
 
----
-
 ### Decisão 3: Responsabilidade do Síndico Pessoa Física (TJRJ, 2025)
 
 **Caso:**
@@ -122,8 +112,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 
 **Princípio:** "Terceirizar não é abandonar responsabilidade. Síndico é vigilante."
 
----
-
 ### Decisão 4: Síndico Versus Administrador de Condomínio (TJDF, 2025)
 
 **Caso:**
@@ -141,8 +129,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 
 **Reconhecimento judicial:** "Condomínio é responsável pelos dados coletados de moradores, independentemente de quem seja o agente negligente."
 
----
-
 ### Decisão 5: Quanto à Resolução do Condomínio (TJ-SC, 2024)
 
 **Caso:**
@@ -158,8 +144,6 @@ A resposta é mais complexa que parece — e envolve a discussão sobre **respon
 - Condomínio é condenado, mas tribunal nota "decisão democrática" como atenuante
 
 **Princípio:** "Voto não substitui conformidade legal. Privacidade não é matéria sujeita a maioria."
-
----
 
 ## Mapa de responsabilidades em condomínio
 
@@ -191,8 +175,6 @@ QUEM FAZ O QUÊ?
    └─ Direito à indenização = Se vazamento/mal uso
 ```
 
----
-
 ## O que as decisões estabelecem sobre SOLIDARIEDADE?
 
 ### Responsabilidade Solidária significa:
@@ -211,8 +193,6 @@ E o condomínio, após pagar, pode cobrar dos outros (regresso)
 
 ### Implicação prática:
 Se você é **síndico**, você está **pessoalmente em risco** por negligência com dados, mesmo que seja cargo voluntário.
-
----
 
 ## Padrão exigido pelas decisões
 
@@ -242,8 +222,6 @@ Se você é **síndico**, você está **pessoalmente em risco** por negligência
 - [ ] Documentar plano de ação
 - [ ] Preservar evidências
 
----
-
 ## Riscos financeiros concretos
 
 ### Cenário 1: Condomínio de 200 apartamentos, vazamento de dados
@@ -265,8 +243,6 @@ Ação de regresso: Síndico terá que reembolsar condomínio
 (Dados biométricos = mais graves)
 Todos solidariamente responsáveis
 ```
-
----
 
 ## Recomendações práticas para condomínios
 
@@ -298,36 +274,3 @@ Todos solidariamente responsáveis
 - [ ] Como comunicar à ANPD
 - [ ] Template de aviso aos moradores
 - [ ] Contato com advogado
-
----
-
-## Conclusão
-
-As primeiras decisões sobre LGPD em condomínios deixam claro:
-
-1. **Condomínio é responsável** — Não há escapatória
-2. **Síndico não se isenta por terceirizar** — Responsabilidade de fiscalização permanece
-3. **Solidariedade é regra** — Todos podem ser cobrados
-4. **Negligência é punida** — Falha em implementar básico resulta em condenação
-5. **Valor é expressivo** — Milhões em risco para edifícios maiores
-
----
-
-## Próximos passos
-
-1. **Se você é síndico:** Revise imediatamente sistemas de dados
-2. **Se você é morador:** Verifique quais dados o condomínio coleta
-3. **Se você é gestor:** Implemente conformidade LGPD urgentemente
-4. **Para todos:** Conheça seus direitos e obrigações
-
----
-
-## Referências
-
-- **TJ-SP, Acórdão 2024 (Vazamento de dados em condomínio)**
-- **TJ-MG, Acórdão 2024 (Biometria em condomínio)**
-- **TJ-RJ, Acórdão 2025 (Síndico e terceirização)**
-- **TJ-DF, Acórdão 2025 (Funcionário e condomínio)**
-- **TJ-SC, Acórdão 2024 (Votação em assembleia)**
-- **LGPD, Arts. 5, 6, 7, 14, 34, 42, 44** (Responsabilidade e incidentes)
-- **Código Civil, Art. 942** (Responsabilidade solidária e regressiva)

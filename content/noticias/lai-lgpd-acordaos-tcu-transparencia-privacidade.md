@@ -1,19 +1,14 @@
----
-titulo: "LAI e LGPD: análise de 5 acórdãos recentes do TCU sobre transparência e privacidade"
-categoria: Setor Público
-tags: [LAI, LGPD, TCU, transparência, privacidade, acórdãos, governo]
-autor: Adriano Israel
-data: 2025-04-05
-resumo: "O Tribunal de Contas da União publicou 5 acórdãos recentes equilibrando Lei de Acesso à Informação com Lei Geral de Proteção de Dados. Saiba como órgãos públicos devem lidar com essa tensão."
----
-
 # LAI e LGPD: análise de 5 acórdãos recentes do TCU sobre transparência e privacidade
 
-O **Tribunal de Contas da União (TCU)** publicou uma série de **5 acórdãos importantes** entre 2024 e 2025 que estabelecem critérios para conciliar duas legislações aparentemente conflitantes: a **Lei de Acesso à Informação (LAI)** e a **Lei Geral de Proteção de Dados (LGPD)**.
+O Tribunal de Contas da União publicou 5 acórdãos recentes equilibrando Lei de Acesso à Informação com Lei Geral de Proteção de Dados. Saiba como órgãos públicos devem lidar com essa tensão.
 
-Esses precedentes são fundamentais para órgãos públicos que precisam decidir quando divulgar informações e quando resguardar dados pessoais.
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 05 abril 2025 · ⏱ 8 min de leitura  
+⚖ Setor Público
 
----
+| Acórdãos analisados | Período | Tema principal |
+|---------------------|---------|----------------|
+| 5 acórdãos         | 2024-2025 | Transparência vs Privacidade |
 
 ## O conflito: transparência vs. privacidade
 
@@ -37,8 +32,6 @@ Servidor B: "Mas meus dados de saúde são protegidos
 
 O TCU precisava definir: quem ganha?
 
----
-
 ## Os 5 acórdãos e seus entendimentos
 
 ### Acórdão 1: Divulgação de salários públicos (Rel. Ministro X)
@@ -55,8 +48,6 @@ O TCU precisava definir: quem ganha?
 
 **Impacto:**
 Prefeituras, câmaras e governos **devem publicar** folhas de pagamento com nomes e salários completos. Não há escape pela LGPD.
-
----
 
 ### Acórdão 2: Dados de auditoria e fiscalização
 
@@ -77,8 +68,6 @@ PERMITIDO publicar:  "João Silva, CPF [X], Diretor de Operações"
 NÃO PERMITIDO:       "Rua das Flores, 42, Santos - SP"
 ```
 
----
-
 ### Acórdão 3: Registros de saúde em órgãos públicos
 
 **Caso:** Secretaria de Saúde ocultou estatísticas de atendimentos por diagnóstico sob proteção LGPD
@@ -94,8 +83,6 @@ NÃO PERMITIDO:       "Rua das Flores, 42, Santos - SP"
 ✓ "42% dos atendimentos foram para mulheres entre 20-35 anos"
 ✗ "Maria da Silva (CPF XXX) foi diagnosticada com tuberculose"
 ```
-
----
 
 ### Acórdão 4: Correção de dados pessoais em processos públicos
 
@@ -118,8 +105,6 @@ PERMITIDO CORRIGIR: "Notificação de multa por R$ 10 mil"
 NÃO PERMITIDO REMOVER: Condenação judicial porque continua sendo fato público
 ```
 
----
-
 ### Acórdão 5: Relatórios de gestão com dados de licitações
 
 **Caso:** Órgão recusou divulgação de relatório que incluía propostas de empresas participantes
@@ -133,8 +118,6 @@ NÃO PERMITIDO REMOVER: Condenação judicial porque continua sendo fato públic
 - Se licitante é **pessoa física** (autônomo, microempreendedor) → dados podem merecer proteção
 - Se licitante é **pessoa jurídica** → dados são públicos
 
----
-
 ## Critérios práticos do TCU para conciliar LAI e LGPD
 
 | Situação | LAI (Transparência) | LGPD (Privacidade) | Resultado |
@@ -145,8 +128,6 @@ NÃO PERMITIDO REMOVER: Condenação judicial porque continua sendo fato públic
 | CPF em lista de beneficiários de programa social | Deve divulgar (auditoria) | Protege | ⚖️ **Anonimize CPF** |
 | Resultado de licitação | Publique (interesse público) | Não protege | ✓ **Publique** |
 | Telefone residencial de agente público | Deve divulgar | Protege parcialmente | ⚖️ **Publique apenas telefone comercial** |
-
----
 
 ## Matriz de decisão para órgãos públicos
 
@@ -167,8 +148,6 @@ Quando receber pedido de informação, pergunte-se:
 ### 4. É informação sensível (saúde, origem, etc.)?
 - SIM → Recuse com fundamento em LGPD
 - NÃO → Divulgue com fundamento em LAI
-
----
 
 ## Impactos para presidências e coordenadores de sistemas
 
@@ -192,8 +171,6 @@ Quando receber pedido de informação, pergunte-se:
 - Registrar justificativa de restrição
 - Oferecer recurso de impugnação
 
----
-
 ## Riscos de não estar em conformidade
 
 ### Com a LAI
@@ -207,8 +184,6 @@ Quando receber pedido de informação, pergunte-se:
 - **ANPD:** Multa até 2% do faturamento
 - **Processado:** Ação de danos morais
 - **CGU:** Processo administrativo
-
----
 
 ## Exemplos práticos de aplicação
 
@@ -227,7 +202,7 @@ Quando receber pedido de informação, pergunte-se:
 (Dados individuais + pessoais + sensíveis)
 ```
 
-### Exemplo 2: Processo de licitação finalizadona
+### Exemplo 2: Processo de licitação finalizada
 
 ```
 ✓ PODE PUBLICAR COMPLETAMENTE:
@@ -244,8 +219,6 @@ Quando receber pedido de informação, pergunte-se:
 - "Licitante A (empresa de porte médio)" se protegido por segredo
 ```
 
----
-
 ## Conclusão: o equilíbrio necessário
 
 Os acórdãos do TCU apontam para um entendimento equilibrado:
@@ -255,8 +228,6 @@ Os acórdãos do TCU apontam para um entendimento equilibrado:
 
 O setor público não pode usar LGPD como desculpa para opacidade. Mas também não pode ignorar que cidadãos têm direito à privacidade mesmo em contextos públicos.
 
----
-
 ## Próximos passos
 
 1. **Audite seus portais LAI** — Procure ocultações inadequadas de dados
@@ -264,8 +235,6 @@ O setor público não pode usar LGPD como desculpa para opacidade. Mas também n
 3. **Treine servidores** — Quem atua em transparência deve conhecer LGPD
 4. **Crie matriz de decisão** — Padronize critérios de sigilo vs. publicação
 5. **Documente justificativas** — Quando negar, explique o fundamento legal
-
----
 
 ## Referências
 

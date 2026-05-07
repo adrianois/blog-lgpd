@@ -1,19 +1,14 @@
----
-titulo: "Resolução CD/ANPD nº 19: Novas regras sobre uso de cookies e rastreamento"
-categoria: Jurisprudência & ANPD
-tags: [ANPD, cookies, rastreamento, resolução, consentimento, privacidade]
-autor: Adriano Israel
-data: 2025-04-15
-resumo: "A Autoridade Nacional de Proteção de Dados publicou a Resolução nº 19, estabelecendo regras claras sobre o uso de cookies e tecnologias de rastreamento em sites e aplicações brasileiras. Entenda o que muda e o que sua organização precisa fazer."
----
-
 # Resolução CD/ANPD nº 19: Novas regras sobre uso de cookies e rastreamento
 
-A **Autoridade Nacional de Proteção de Dados (ANPD)** publicou no Diário Oficial da União a **Resolução CD/ANPD nº 19**, que estabelece as primeiras diretrizes específicas para o uso de cookies, pixels de rastreamento, fingerprinting e demais tecnologias de monitoramento de comportamento online no Brasil.
+A Autoridade Nacional de Proteção de Dados publicou a Resolução nº 19, estabelecendo regras claras sobre o uso de cookies e tecnologias de rastreamento em sites e aplicações brasileiras. Entenda o que muda e o que sua organização precisa fazer.
 
-A norma entra em vigor em **90 dias** a partir da publicação, com prazo de adequação de **12 meses** para empresas de pequeno e médio porte e **6 meses** para grandes controladores.
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 15 abril 2025 · ⏱ 5 min de leitura  
+⚖ Jurisprudência & ANPD
 
----
+| Vigência | Prazo PME | Prazo grandes empresas |
+|----------|-----------|-----------------------|
+| 90 dias | 12 meses | 6 meses |
 
 ## O que são cookies e por que a ANPD regulamentou?
 
@@ -22,8 +17,6 @@ Cookies são pequenos arquivos armazenados no navegador do usuário que permitem
 Embora amplamente utilizados, os cookies nunca foram regulamentados de forma específica no Brasil. A LGPD (Lei nº 13.709/2018) já exigia que o tratamento de dados pessoais fosse baseado em uma das hipóteses legais do art. 7º, mas não havia clareza sobre **como** coletar consentimento para cookies, **quais tipos** dependem de autorização e **o que** informar ao usuário.
 
 A Resolução nº 19 preenche essa lacuna.
-
----
 
 ## Classificação dos cookies pela Resolução nº 19
 
@@ -43,8 +36,6 @@ Melhoram a experiência do usuário (lembrar idioma, região) ou medem o desempe
 Utilizados para perfis comportamentais, remarketing, rastreamento entre domínios e compartilhamento com plataformas de anúncios (Google, Meta, etc.).
 
 **Regra:** Exigem consentimento **explícito, granular e específico** por finalidade. O usuário deve poder revogar a qualquer momento com a mesma facilidade com que concedeu.
-
----
 
 ## Requisitos do banner de cookies (aviso de privacidade)
 
@@ -67,8 +58,6 @@ A resolução estabelece os requisitos mínimos para o **cookie banner** ou **ce
 - Exibir banner com cores e tamanhos que induzam o clique em "Aceitar"
 - Renovar o consentimento antes do prazo sem justificativa
 
----
-
 ## Prazo de retenção e revisão
 
 A Resolução nº 19 também estabelece:
@@ -77,8 +66,6 @@ A Resolução nº 19 também estabelece:
 - **Obrigação de revisão** do aviso de privacidade sempre que novos cookies forem adicionados
 - **Registro de versões** do aviso, com data de vigência de cada versão
 
----
-
 ## Impacto para órgãos públicos
 
 Prefeituras, câmaras municipais e demais órgãos públicos com presença digital também estão sujeitos à norma. Muitos portais governamentais já utilizam Google Analytics, ferramentas de chat e pixels de redes sociais sem qualquer aviso ao cidadão.
@@ -86,8 +73,6 @@ Prefeituras, câmaras municipais e demais órgãos públicos com presença digit
 Para o setor público, a **base legal aplicável** não é o consentimento (art. 7º, I), mas sim o **cumprimento de obrigação legal** (art. 7º, II) ou o **exercício regular de direitos** (art. 7º, VI) — **exceto** para cookies de publicidade e rastreamento, que permanecem exigindo consentimento mesmo no setor público.
 
 **Recomendação prática para municípios:** remova qualquer pixel de rastreamento de redes sociais dos portais institucionais. Não há base legal que sustente esse tratamento.
-
----
 
 ## Checklist de adequação
 
@@ -103,8 +88,6 @@ Use esta lista para verificar se o seu site está em conformidade com a Resoluç
 - [ ] Atualização da Política de Privacidade com seção sobre cookies
 - [ ] Definição de prazo de revisão anual do aviso
 
----
-
 ## Penalidades pelo descumprimento
 
 O descumprimento da Resolução nº 19 pode ensejar:
@@ -116,8 +99,6 @@ O descumprimento da Resolução nº 19 pode ensejar:
 
 A ANPD sinalizou que iniciará ações fiscalizatórias em **grandes plataformas** no primeiro ciclo e, posteriormente, ampliará para médias empresas e órgãos públicos federais.
 
----
-
 ## Próximos passos recomendados
 
 1. **Realize uma auditoria de cookies** no seu site ainda este mês
@@ -128,8 +109,8 @@ A ANPD sinalizou que iniciará ações fiscalizatórias em **grandes plataformas
 
 A Resolução nº 19 representa um marco importante para a privacidade digital no Brasil. Organizações que já possuem processos de gestão de consentimento terão adaptações pontuais; aquelas que nunca se preocuparam com o tema terão trabalho significativo pela frente.
 
----
+## Referências
 
-*Fonte: Diário Oficial da União — ANPD. Acompanhe a íntegra da resolução no portal oficial da ANPD: [gov.br/anpd](https://www.gov.br/anpd).*
-
-*Dúvidas? Entre em contato: adriano.israel@live.com*
+- **Fonte:** Diário Oficial da União — ANPD
+- **Acompanhe a íntegra:** [gov.br/anpd](https://www.gov.br/anpd)
+- **Contato:** adriano.israel@live.com

@@ -1,19 +1,14 @@
----
-titulo: "Ataque de ransomware expõe dados de 400 mil pacientes em hospital federal"
-categoria: Segurança da Informação
-tags: [ransomware, hospital, setor público, incidente, vazamento, cibersegurança]
-autor: Adriano Israel
-data: 2025-02-28
-resumo: "Ataque de ransomware contra hospital federal resultou na exposição de dados pessoais de 400 mil pacientes. Saiba como ficaram vulneráveis dados de saúde e quais as implicações legais."
----
-
 # Ataque de ransomware expõe dados de 400 mil pacientes em hospital federal
 
-Um **ataque de ransomware** sofisticado atingiu um grande hospital federal no sul do Brasil em fevereiro de 2025, resultando na **exposição de dados pessoais de aproximadamente 400 mil pacientes**, incluindo registros médicos, diagnósticos, medicações e informações financeiras.
+Ataque de ransomware contra hospital federal resultou na exposição de dados pessoais de 400 mil pacientes. Saiba como ficaram vulneráveis dados de saúde e quais as implicações legais.
 
-O incidente representa um dos maiores vazamentos de dados de saúde no país desde a vigência da LGPD e levanta preocupações criticas sobre a segurança cibernética no setor público.
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 28 fevereiro 2025 · ⏱ 10 min de leitura  
+⚖ Segurança da Informação · Setor Público
 
----
+| Pacientes afetados | Dados sensíveis expostos | Custo estimado |
+|-------------------|--------------------------|----------------|
+| 400 mil          | Diagnósticos, medicações | R$ 800 milhões |
 
 ## O que aconteceu?
 
@@ -38,8 +33,6 @@ O incidente representa um dos maiores vazamentos de dados de saúde no país des
 - Hospital comunica à ANPD sobre incidente
 - Defesa Civil e Polícia Federal acionadas
 - Hospital trabalha com sistemas legados e papel
-
----
 
 ## Qual foi o impacto?
 
@@ -76,8 +69,6 @@ Os atacantes conseguiram acessar:
 - Dependentes químicos e em psicoterapia tiveram historiais vazados
 - Potencial exposição a discriminação, assédio ou golpes
 
----
-
 ## Como isso violou a LGPD?
 
 ### Falhas graves de segurança
@@ -112,8 +103,6 @@ Segundo análise da polícia federal e auditores de segurança:
 - **Art. 18, I:** Falha na avaliação de impacto à proteção de dados
 - **Art. 34:** Não comunicou incidente em 72h (comunicou com atraso)
 
----
-
 ## Implicações legais e financeiras
 
 ### Multas previstas
@@ -131,8 +120,6 @@ Polícia Federal abriu inquérito sob:
 Baseado em jurisprudência recente do STJ:
 - **Cada vítima:** Entre R$ 5 mil a R$ 50 mil por danos morais
 - **400 mil pacientes:** Potencial exposição de R$ 2 a R$ 20 **bilhões** em ações judiciais
-
----
 
 ## Lições aprendidas para o setor público
 
@@ -153,8 +140,6 @@ Baseado em jurisprudência recente do STJ:
 ✓ **Segregação de rede** — DMZ, VLANs, firewall interno
 ✓ **Gestão de patches** — Políticas automáticas de atualização
 ✓ **Treinamento de segurança** — Mensal, focado em setor público
-
----
 
 ## Comunicação aos pacientes: o que foi enviado
 
@@ -179,8 +164,6 @@ O hospital enviou aos 400 mil afetados:
 > - Denuncie tentativas de fraude à polícia
 > - Contate nosso call center: [número]"
 
----
-
 ## Dúvidas frequentes
 
 ### Meus dados foram realmente expostos?
@@ -204,8 +187,6 @@ Sim. Você pode:
 3. Mude senhas de aplicativos sensíveis
 4. Ative alertas de transações no banco
 5. Guarde certificado do incidente para processo
-
----
 
 ## Referências
 

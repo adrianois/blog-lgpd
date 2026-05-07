@@ -1,19 +1,14 @@
----
-titulo: "Regulamento de Comunicação de Incidentes: prazo de 72h é confirmado"
-categoria: Setor Público
-tags: [ANPD, incidentes, comunicação, 72 horas, regulamento, vazamento]
-autor: Adriano Israel
-data: 2025-03-15
-resumo: "A ANPD confirmou o regulamento que obriga notificação de incidentes de segurança em até 72 horas. Entenda as exceções, procedimentos e penalidades."
----
-
 # Regulamento de Comunicação de Incidentes: prazo de 72h é confirmado
 
-A **Autoridade Nacional de Proteção de Dados (ANPD)** finalizou e publicou a versão definitiva do **Regulamento de Comunicação de Incidentes de Segurança**, que estabelece o prazo máximo de **72 horas** para notificação de vazamentos de dados pessoais.
+A ANPD confirmou o regulamento que obriga notificação de incidentes de segurança em até 72 horas. Entenda as exceções, procedimentos e penalidades.
 
-O regulamento, que já constava na **LGPD (art. 34)** de forma genérica, agora ganhou definições operacionais claras sobre quando contar, a quem informar e quais as exceções.
+**Adriano Israel** · Análise editorial · Blog LGPD  
+📅 15 março 2025 · ⏱ 6 min de leitura  
+⚖ Setor Público
 
----
+| Prazo confirmado | Penalidade máxima | Aplicação |
+|------------------|-------------------|-----------|
+| 72 horas        | R$ 50 milhões    | Todos os setores |
 
 ## O que é considerado "incidente de segurança"?
 
@@ -43,8 +38,6 @@ Qualquer evento que resulte em:
 - Detecção de malware em endpoint, removido antes de causar dano
 - Suspeita de acesso físico não autorizado a sala de servidores
 
----
-
 ## O prazo de 72 horas: como funciona?
 
 ### Contagem
@@ -67,8 +60,6 @@ Qualquer evento que resulte em:
 - ✗ Apresentar relatório final de causa raiz
 - ✗ Implementar todas as medidas corretivas
 
----
-
 ## Notificação à ANPD
 
 ### Como fazer
@@ -87,8 +78,6 @@ Qualquer evento que resulte em:
 
 ### Confidencialidade
 A ANPD mantém a comunicação em sigiloso. Você pode informar-se como preferir que a ANPD divulgue a informação — publicamente ou confidencialmente.
-
----
 
 ## Notificação aos cidadãos afetados
 
@@ -135,8 +124,6 @@ Contato: [email e telefone para questions]
 - Carta registrada (para dados de endereço importantes)
 - Publicação no site (complementar, não substitui comunicação direto)
 
----
-
 ## Penalidades por não respeitar o prazo
 
 ### ANPD
@@ -147,8 +134,6 @@ Contato: [email e telefone para questions]
 ### Judicialmente
 - Ações coletivas de consumidores
 - Indenizações por danos morais (conforme jurisprudência do STJ recente)
-
----
 
 ## Casos especiais e exceções
 
@@ -166,8 +151,6 @@ Seguem mesmo prazo de 72h, mas precisam envolver:
 - Delegacia de Polícia Federal
 - Controlador local (prefeito, governador)
 
----
-
 ## Checklist de preparação
 
 Para estar pronto quando um incidente ocorrer:
@@ -179,8 +162,6 @@ Para estar pronto quando um incidente ocorrer:
 - ☐ Sistema de backup testado e documentado
 - ☐ Isolamento de sistemas críticos planejado
 - ☐ Logs centralizados e retenção adequada
-
----
 
 ## Próximos passos
 
