@@ -112,10 +112,14 @@
     if (!file) {
       setError('Nenhum arquivo de artigo foi informado.');
     } else {
-      // Corrigir caminho relativo para caminho absoluto no GitHub Pages
-      if (!file.startsWith('/blog-lgpd/')) {
-        // Se for um caminho relativo como ../content/artigos/nome.md, converter para /blog-lgpd/content/artigos/nome.md
-        file = file.replace(/^\.\.\/content\//, '/blog-lgpd/content/');
+      // Converter caminho local para URL raw do GitHub
+      if (file.startsWith('/blog-lgpd/')) {
+        // Remover /blog-lgpd/ do início e converter para raw.githubusercontent.com
+        const filePath = file.substring('/blog-lgpd/'.length);
+        file = `https://raw.githubusercontent.com/adrianois/blog-lgpd/main/${filePath}`;
+      } else if (!file.startsWith('http')) {
+        // Se for um caminho relativo, também converter
+        file = `https://raw.githubusercontent.com/adrianois/blog-lgpd/main/${file.replace(/^\.\.\//, '')}`;
       }
       
       fetch(file)
