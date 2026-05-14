@@ -95,6 +95,225 @@
     .curso-preco small { font-size: 0.88rem; color: rgba(255,255,255,0.45); font-family: 'Montserrat', sans-serif; }
     .curso-sidebar p { color: rgba(255,255,255,0.6); font-size: 0.84rem; line-height: 1.6; }
     .curso-sidebar .btn { width: 100%; justify-content: center; margin-top: 4px; }
+
+    /* ════════════════════════════════
+       MODAL DE INSCRIÇÃO
+    ════════════════════════════════ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 31, 60, 0.75);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 24px 64px rgba(13, 31, 60, 0.35);
+      overflow: hidden;
+      transform: translateY(24px) scale(0.97);
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .modal-overlay.open .modal {
+      transform: translateY(0) scale(1);
+    }
+
+    .modal-header {
+      background: var(--shield-gradient);
+      padding: 28px 32px 24px;
+      position: relative;
+    }
+    .modal-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,201,177,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,201,177,0.07) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    .modal-curso-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.66rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--cyan);
+      background: rgba(0,201,177,0.15);
+      border: 1px solid rgba(0,201,177,0.35);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .modal-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+      position: relative;
+    }
+    .modal-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 6px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 32px;
+      height: 32px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--white);
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition);
+      z-index: 1;
+      line-height: 1;
+      padding: 0;
+    }
+    .modal-close:hover { background: rgba(255,255,255,0.25); transform: rotate(90deg); }
+
+    .modal-body { padding: 28px 32px 32px; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 16px;
+    }
+    .form-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .form-label span { color: var(--seguranca); margin-left: 2px; }
+
+    .form-input {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid var(--gray-border);
+      border-radius: var(--radius);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text);
+      background: var(--white);
+      transition: all var(--transition);
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .form-input:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px var(--cyan-glow);
+    }
+    .form-input::placeholder { color: var(--text-muted); }
+    .form-input.error { border-color: var(--seguranca); box-shadow: 0 0 0 3px rgba(192,57,43,0.1); }
+
+    .field-error {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.71rem;
+      font-weight: 600;
+      color: var(--seguranca);
+      display: none;
+    }
+    .field-error.show { display: block; }
+
+    .modal-submit {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.92rem;
+      padding: 13px 24px;
+      margin-top: 8px;
+    }
+    .modal-submit:disabled { opacity: 0.7; cursor: not-allowed; transform: none !important; box-shadow: none !important; }
+
+    .spinner {
+      width: 15px;
+      height: 15px;
+      border: 2px solid rgba(13,31,60,0.2);
+      border-top-color: var(--navy-deep);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      flex-shrink: 0;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .modal-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+      padding: 8px 0 4px;
+    }
+    .modal-success.show { display: flex; }
+    .success-icon {
+      width: 68px;
+      height: 68px;
+      background: var(--cyan-glow);
+      border: 2px solid var(--cyan);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+    }
+    .success-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy-deep);
+    }
+    .success-desc {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      max-width: 300px;
+    }
+
+    .consent-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.71rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      padding-top: 14px;
+      border-top: 1px solid var(--gray-border);
+      margin-top: 4px;
+    }
+    .consent-text a { color: var(--navy-mid); text-decoration: underline; }
+
+    body.modal-open { overflow: hidden; }
   </style>
 </head>
 <body>
@@ -109,9 +328,7 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="../index.html" class="logo">
-        <div class="logo-shield">
-          <span class="logo-shield-icon">🛡</span>
-        </div>
+        <div class="logo-shield"><span class="logo-shield-icon">🛡</span></div>
         <div class="logo-text-wrap">
           <span class="logo-title">Guardião</span>
           <span class="logo-sub">Sistema de LGPD</span>
@@ -157,7 +374,9 @@
               <li>Boas práticas: mesa limpa, senhas seguras e compartilhamento de dados</li>
               <li>Certificado de conclusão digital incluso</li>
             </ul>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-primary">Quero me inscrever gratuitamente</a>
+            <button class="btn btn-primary" onclick="abrirModal('LGPD Essencial para Servidores Públicos', 'Nível 1 · Gratuito', '🟢')">
+              Quero me inscrever gratuitamente
+            </button>
           </div>
           <div class="curso-sidebar">
             <div class="curso-preco">Grátis <small>/ acesso vitalício</small></div>
@@ -165,7 +384,9 @@
             <p>📆 4 horas · 100% online e assíncrono</p>
             <p>📜 Certificado incluso</p>
             <p>👥 +200 servidores já concluíram</p>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-white">Acessar agora →</a>
+            <button class="btn btn-white" onclick="abrirModal('LGPD Essencial para Servidores Públicos', 'Nível 1 · Gratuito', '🟢')">
+              Acessar agora →
+            </button>
           </div>
         </div>
       </div>
@@ -185,7 +406,9 @@
               <li><strong>Workshop Prático:</strong> Elaboração completa de um RIPD real</li>
               <li>Mentoria em grupo por 30 dias pós-curso</li>
             </ul>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-primary">Garantir minha vaga</a>
+            <button class="btn btn-primary" onclick="abrirModal('DPO Master: Da Teoria à Nomeação', 'Nível 2 · R$ 997', '🔵')">
+              Garantir minha vaga
+            </button>
           </div>
           <div class="curso-sidebar">
             <div class="curso-preco">R$&nbsp;997 <small>/ acesso vitalício</small></div>
@@ -193,7 +416,9 @@
             <p>📆 20 horas · Online com workshops ao vivo</p>
             <p>📜 Certificado + Carta de Nomeação modelo</p>
             <p>🤝 Mentoria em grupo inclusa</p>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-white">Matricular-me →</a>
+            <button class="btn btn-white" onclick="abrirModal('DPO Master: Da Teoria à Nomeação', 'Nível 2 · R$ 997', '🔵')">
+              Matricular-me →
+            </button>
           </div>
         </div>
       </div>
@@ -214,7 +439,9 @@
               <li>Gestão de incidentes e notificação à ANPD</li>
               <li>Como montar e escalar uma consultoria de privacidade</li>
             </ul>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-primary">Quero ser consultor LGPD</a>
+            <button class="btn btn-primary" onclick="abrirModal('Metodologia de Implementação 360°', 'Nível 3 · R$ 2.497', '🔴')">
+              Quero ser consultor LGPD
+            </button>
           </div>
           <div class="curso-sidebar">
             <div class="curso-preco">R$&nbsp;2.497 <small>/ acesso vitalício</small></div>
@@ -222,10 +449,13 @@
             <p>📆 40 horas · Online + consultoria supervisionada</p>
             <p>📜 Certificado + Metodologia proprietária</p>
             <p>💼 Modelo de proposta comercial incluso</p>
-            <a href="mailto:adriano.israel@live.com" class="btn btn-white">Falar com Adriano →</a>
+            <button class="btn btn-white" onclick="abrirModal('Metodologia de Implementação 360°', 'Nível 3 · R$ 2.497', '🔴')">
+              Falar com Adriano →
+            </button>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -301,6 +531,198 @@
     </div>
   </footer>
 
+  <!-- ══════════════════════════════════════════════════
+       MODAL DE INSCRIÇÃO
+  ══════════════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal" id="modal">
+
+      <div class="modal-header">
+        <button class="modal-close" onclick="fecharModal()" aria-label="Fechar">✕</button>
+        <div class="modal-curso-badge" id="modalBadge"></div>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-subtitle">Preencha seus dados para garantir sua inscrição.</p>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Formulário -->
+        <div id="modalFormWrap">
+          <div class="form-group">
+            <label class="form-label" for="inputNome">Nome completo <span>*</span></label>
+            <input class="form-input" type="text" id="inputNome" placeholder="Seu nome completo" autocomplete="name" maxlength="120" />
+            <span class="field-error" id="erroNome">Por favor, informe seu nome completo.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inputEmail">E-mail <span>*</span></label>
+            <input class="form-input" type="email" id="inputEmail" placeholder="seu@email.com" autocomplete="email" maxlength="254" />
+            <span class="field-error" id="erroEmail">Informe um endereço de e-mail válido.</span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="inputTelefone">Telefone / WhatsApp <span>*</span></label>
+            <input class="form-input" type="tel" id="inputTelefone" placeholder="(67) 9 9999-9999" autocomplete="tel" maxlength="20" />
+            <span class="field-error" id="erroTelefone">Informe um número de telefone válido.</span>
+          </div>
+
+          <button class="btn btn-primary modal-submit" id="btnEnviar" onclick="enviarInscricao()">
+            Confirmar inscrição
+          </button>
+
+          <p class="consent-text">
+            🔒 Seus dados são usados somente para contato sobre este curso, em total conformidade com a
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD (Lei nº 13.709/2018)</a>.
+            Não compartilhamos suas informações com terceiros.
+          </p>
+        </div>
+
+        <!-- Sucesso -->
+        <div class="modal-success" id="modalSuccess">
+          <div class="success-icon">✅</div>
+          <p class="success-title">Inscrição recebida!</p>
+          <p class="success-desc">
+            Obrigado! Entraremos em contato em breve pelo e-mail ou WhatsApp informado
+            com os próximos passos para o curso.
+          </p>
+          <button class="btn btn-primary" onclick="fecharModal()" style="margin-top:6px;">Fechar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <script src="../assets/js/script.js"></script>
+  <script>
+    // ── CONFIGURAÇÃO ─────────────────────────────────────────────────
+    // Após publicar o Apps Script (.gs), cole a URL aqui:
+    const APPS_SCRIPT_URL_CURSOS = 'https://script.google.com/macros/s/AKfycbw-m-G6epWyR4EQDpiscipg85nSdalZ1psV7scksMPW-K77Pp1u2QkAA1-gJnOZ01Ix/exec';
+
+    let cursoAtual = '';
+
+    // ── Máscara de telefone ──────────────────────────────────────────
+    document.getElementById('inputTelefone').addEventListener('input', function () {
+      let v = this.value.replace(/\D/g, '').slice(0, 11);
+      if      (v.length === 11) v = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+      else if (v.length >= 10)  v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+      else if (v.length >= 7)   v = v.replace(/(\d{2})(\d{4,5})/, '($1) $2');
+      else if (v.length >= 3)   v = v.replace(/(\d{2})(\d+)/, '($1) $2');
+      this.value = v;
+    });
+
+    // ── Abrir modal ──────────────────────────────────────────────────
+    function abrirModal(curso, nivel, emoji) {
+      cursoAtual = curso;
+      document.getElementById('modalTitle').textContent = curso;
+      document.getElementById('modalBadge').textContent = emoji + '  ' + nivel;
+      resetarModal();
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.classList.add('modal-open');
+      setTimeout(() => document.getElementById('inputNome').focus(), 200);
+    }
+
+    // ── Fechar modal ─────────────────────────────────────────────────
+    function fecharModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.classList.remove('modal-open');
+      setTimeout(resetarModal, 300);
+    }
+
+    // Fecha clicando no overlay
+    document.getElementById('modalOverlay').addEventListener('click', e => {
+      if (e.target === e.currentTarget) fecharModal();
+    });
+
+    // Fecha com Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.getElementById('modalOverlay').classList.contains('open')) {
+        fecharModal();
+      }
+    });
+
+    // ── Resetar estado ───────────────────────────────────────────────
+    function resetarModal() {
+      ['inputNome', 'inputEmail', 'inputTelefone'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) { el.value = ''; el.classList.remove('error'); }
+      });
+      ['erroNome', 'erroEmail', 'erroTelefone'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.remove('show');
+      });
+      const wrap = document.getElementById('modalFormWrap');
+      const suc  = document.getElementById('modalSuccess');
+      const btn  = document.getElementById('btnEnviar');
+      if (wrap) wrap.style.display = '';
+      if (suc)  suc.classList.remove('show');
+      if (btn)  { btn.disabled = false; btn.innerHTML = 'Confirmar inscrição'; }
+    }
+
+    // ── Validação ────────────────────────────────────────────────────
+    function validar() {
+      let ok = true;
+
+      const nome = document.getElementById('inputNome').value.trim();
+      if (nome.length < 3) { erro('inputNome', 'erroNome'); ok = false; }
+      else                 { ok_campo('inputNome', 'erroNome'); }
+
+      const email = document.getElementById('inputEmail').value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { erro('inputEmail', 'erroEmail'); ok = false; }
+      else                                             { ok_campo('inputEmail', 'erroEmail'); }
+
+      const tel = document.getElementById('inputTelefone').value.replace(/\D/g, '');
+      if (tel.length < 10) { erro('inputTelefone', 'erroTelefone'); ok = false; }
+      else                 { ok_campo('inputTelefone', 'erroTelefone'); }
+
+      return ok;
+    }
+
+    function erro(inputId, erroId) {
+      document.getElementById(inputId).classList.add('error');
+      document.getElementById(erroId).classList.add('show');
+    }
+    function ok_campo(inputId, erroId) {
+      document.getElementById(inputId).classList.remove('error');
+      document.getElementById(erroId).classList.remove('show');
+    }
+
+    // ── Enviar inscrição ─────────────────────────────────────────────
+    async function enviarInscricao() {
+      if (!validar()) return;
+
+      const btn   = document.getElementById('btnEnviar');
+      const nome  = document.getElementById('inputNome').value.trim();
+      const email = document.getElementById('inputEmail').value.trim().toLowerCase();
+      const tel   = document.getElementById('inputTelefone').value.trim();
+
+      btn.disabled = true;
+      btn.innerHTML = '<span class="spinner"></span>&nbsp; Enviando...';
+
+      try {
+        const params = new URLSearchParams({
+          nome,
+          email,
+          telefone: tel,
+          curso:    cursoAtual,
+          ts:       Date.now()
+        });
+
+        // GET com no-cors evita bloqueio de CORS do Apps Script
+        await fetch(`${APPS_SCRIPT_URL_CURSOS}?${params}`, {
+          method: 'GET',
+          mode:   'no-cors'
+        });
+
+        // no-cors não devolve resposta — assumimos sucesso
+        document.getElementById('modalFormWrap').style.display = 'none';
+        document.getElementById('modalSuccess').classList.add('show');
+
+      } catch {
+        btn.disabled = false;
+        btn.innerHTML = 'Confirmar inscrição';
+        alert('Não foi possível enviar. Verifique sua conexão e tente novamente.');
+      }
+    }
+  </script>
 </body>
 </html>
