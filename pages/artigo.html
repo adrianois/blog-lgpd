@@ -140,31 +140,22 @@
       document.getElementById('articleTitle').textContent = 'Erro ao carregar artigo';
     }
 
-    // ── Resolve URL do arquivo .md usando env.js ──────────────────────
+    // ── Resolve URL do arquivo .md usando env.js ou API ───────────────
     function resolveFileUrl(file) {
-      const env  = window.__ENV || {};
-      const base = env.GITHUB_RAW_BASE ||
-                   'https://raw.githubusercontent.com/adrianois/blog-lgpd/main';
-
       if (file.startsWith('http')) return file;
 
-      // Remove prefixo /blog-lgpd/ ou ../ e monta URL completa
+      // Remove prefixo /blog-lgpd/ ou ../
       const clean = file
         .replace(/^\/blog-lgpd\//, '')
         .replace(/^\.\.\//, '');
 
-      return `${base}/${clean}`;
+      // Redireciona a chamada para a nossa API Serverless segura no Vercel
+      return `/api/markdown?file=${encodeURIComponent(clean)}`;
     }
 
-    // ── Fetch com Authorization para repositório privado ─────────────
+    // ── Fetch via Serverless API (protege o token e resolve CORS) ─────
     async function fetchMarkdown(url) {
-      const env     = window.__ENV || {};
-      const headers = {};
-      if (env.GITHUB_AUTH && !env.GITHUB_AUTH.includes('SEU_TOKEN_AQUI') && env.GITHUB_AUTH.trim() !== 'token') {
-        headers['Authorization'] = env.GITHUB_AUTH;
-      }
-
-      const r = await fetch(url, { headers });
+      const r = await fetch(url);
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.text();
     }
