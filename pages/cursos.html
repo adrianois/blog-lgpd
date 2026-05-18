@@ -5,25 +5,25 @@
   <title>Cursos & Formação | Guardião — Sistema de LGPD</title>
   <meta name="description" content="Formações práticas em LGPD para servidores públicos, DPOs e consultores. Do básico à implementação completa.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- ✅ env.js DEVE vir antes de qualquer outro script -->
+  <script src="../assets/js/env.js"></script>
   <link rel="stylesheet" href="../assets/css/style.css">
+
   <style>
     /* ═══════════════════════════════════════
        BADGES DE NÍVEL
     ═══════════════════════════════════════ */
     .nivel-badge {
       display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 18px;
+      font-size: .7rem; font-weight: 800;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
     }
-    .nivel-0 { background: rgba(13,122,95,0.2);  color: #4fd1a5; }
-    .nivel-1 { background: rgba(0,201,177,0.15); color: var(--cyan, #00c9b1); }
-    .nivel-2 { background: rgba(192,57,43,0.2);  color: #f4a09a; }
+    .nivel-0 { background: rgba(13,122,95,.2);  color: #4fd1a5; }
+    .nivel-1 { background: rgba(0,201,177,.15); color: var(--cyan,#00c9b1); }
+    .nivel-2 { background: rgba(192,57,43,.2);  color: #f4a09a; }
 
     /* ═══════════════════════════════════════
        CARDS DE CURSO
@@ -31,161 +31,135 @@
     .curso-full-card {
       background: var(--white);
       border: 1px solid var(--gray-border);
-      border-radius: var(--radius-lg, 12px);
+      border-radius: var(--radius-lg,12px);
       overflow: hidden;
       box-shadow: var(--shadow);
-      transition: box-shadow var(--transition, 0.2s);
+      transition: box-shadow var(--transition,.2s);
     }
     .curso-full-card:hover { box-shadow: var(--shadow-lg); }
     .curso-full-card + .curso-full-card { margin-top: 32px; }
 
-    .curso-card-inner {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-    }
+    .curso-card-inner { display: grid; grid-template-columns: 1fr 300px; }
 
     .curso-body { padding: 36px 40px; }
     .curso-body h2 {
       font-family: 'Source Serif 4', serif;
-      font-size: 1.55rem;
-      font-weight: 700;
-      color: var(--navy-deep, #0d1f3c);
-      margin-bottom: 10px;
+      font-size: 1.55rem; font-weight: 700;
+      color: var(--navy-deep,#0d1f3c); margin-bottom: 10px;
     }
     .curso-body .desc {
-      color: var(--text-muted);
-      font-size: 0.94rem;
-      margin-bottom: 24px;
-      line-height: 1.75;
+      color: var(--text-muted); font-size: .94rem;
+      margin-bottom: 24px; line-height: 1.75;
     }
 
     .modulos-list { list-style: none; margin-bottom: 28px; }
     .modulos-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-size: 0.9rem;
-      color: var(--text);
+      display: flex; align-items: flex-start;
+      gap: 10px; margin-bottom: 10px;
+      font-size: .9rem; color: var(--text);
     }
     .modulos-list li::before {
-      content: '✓';
-      color: var(--cyan-dark, #00a896);
-      font-weight: 800;
-      flex-shrink: 0;
-      margin-top: 1px;
+      content: '✓'; color: var(--cyan-dark,#00a896);
+      font-weight: 800; flex-shrink: 0; margin-top: 1px;
     }
 
     .curso-sidebar {
-      background: var(--shield-gradient, linear-gradient(160deg,#0d1f3c,#1a3a5c));
+      background: linear-gradient(160deg,#0d1f3c,#1a3a5c);
       padding: 36px 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 14px;
-      position: relative;
-      overflow: hidden;
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 14px;
+      position: relative; overflow: hidden;
     }
     .curso-sidebar::before {
-      content: '🎓';
-      position: absolute;
+      content: '🎓'; position: absolute;
       bottom: -20px; right: -10px;
-      font-size: 7rem;
-      opacity: 0.06;
-      line-height: 1;
+      font-size: 7rem; opacity: .06; line-height: 1;
     }
     .curso-preco {
       font-family: 'Source Serif 4', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--cyan, #00c9b1);
+      font-size: 2.2rem; font-weight: 700;
+      color: var(--cyan,#00c9b1);
     }
     .curso-preco small {
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.45);
+      font-size: .88rem; color: rgba(255,255,255,.45);
       font-family: 'Montserrat', sans-serif;
     }
-    .curso-sidebar p   { color: rgba(255,255,255,0.6); font-size: 0.84rem; line-height: 1.6; }
+    .curso-sidebar p   { color: rgba(255,255,255,.6); font-size: .84rem; line-height: 1.6; }
     .curso-sidebar .btn { width: 100%; justify-content: center; margin-top: 4px; cursor: pointer; }
 
     /* ═══════════════════════════════════════
-       RESPONSIVO — MOBILE
+       RESPONSIVO MOBILE
     ═══════════════════════════════════════ */
     @media (max-width: 900px) {
-      .curso-card-inner { grid-template-columns: 1fr 260px; }
-      .curso-body   { padding: 28px; }
-      .curso-sidebar{ padding: 28px 24px; }
+      .curso-card-inner  { grid-template-columns: 1fr 260px; }
+      .curso-body        { padding: 28px; }
+      .curso-sidebar     { padding: 28px 24px; }
     }
     @media (max-width: 760px) {
-      .curso-card-inner   { grid-template-columns: 1fr; }
-      .curso-sidebar      { border-radius: 0; padding: 24px 20px; gap: 10px; }
+      .curso-card-inner  { grid-template-columns: 1fr; }
+      .curso-sidebar     { border-radius: 0; padding: 24px 20px; gap: 10px; }
       .curso-sidebar::before { display: none; }
-      .curso-body         { padding: 24px 20px; }
-      .curso-body h2      { font-size: 1.25rem; }
-      .curso-preco        { font-size: 1.75rem; }
-      .curso-sidebar .btn { font-size: 0.88rem; }
-      .trilha-grid        { grid-template-columns: 1fr !important; gap: 16px; }
-      .page-hero          { padding: 40px 0 32px; }
-      .page-hero h1       { font-size: clamp(1.5rem, 6vw, 2.4rem); }
+      .curso-body        { padding: 24px 20px; }
+      .curso-body h2     { font-size: 1.25rem; }
+      .curso-preco       { font-size: 1.75rem; }
+      .curso-sidebar .btn{ font-size: .88rem; }
+      .trilha-grid       { grid-template-columns: 1fr !important; gap: 16px; }
+      .page-hero         { padding: 40px 0 32px; }
+      .page-hero h1      { font-size: clamp(1.5rem,6vw,2.4rem); }
     }
     @media (max-width: 480px) {
-      .curso-body         { padding: 20px 16px; }
-      .curso-sidebar      { padding: 20px 16px; }
-      .curso-body h2      { font-size: 1.1rem; }
-      .modulos-list li    { font-size: 0.85rem; }
-      .curso-body .desc   { font-size: 0.88rem; }
-      .nivel-badge        { font-size: 0.65rem; padding: 4px 11px; }
+      .curso-body        { padding: 20px 16px; }
+      .curso-sidebar     { padding: 20px 16px; }
+      .curso-body h2     { font-size: 1.1rem; }
+      .modulos-list li   { font-size: .85rem; }
+      .curso-body .desc  { font-size: .88rem; }
+      .nivel-badge       { font-size: .65rem; padding: 4px 11px; }
     }
 
     /* ═══════════════════════════════════════
-       MODAL
+       MODAL DE INSCRIÇÃO
     ═══════════════════════════════════════ */
     .modal-overlay {
       position: fixed; inset: 0;
-      background: rgba(13,31,60,0.78);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+      background: rgba(13,31,60,.8);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
       z-index: 1000;
       display: flex; align-items: center; justify-content: center;
       padding: 16px;
       opacity: 0; visibility: hidden;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
+      transition: opacity .25s ease, visibility .25s ease;
     }
     .modal-overlay.open { opacity: 1; visibility: visible; }
 
     .modal {
       background: var(--white);
-      border-radius: var(--radius-lg, 12px);
+      border-radius: var(--radius-lg,12px);
       width: 100%; max-width: 480px;
       max-height: 94vh; overflow-y: auto;
-      box-shadow: 0 24px 64px rgba(13,31,60,0.38);
-      transform: translateY(24px) scale(0.97);
-      transition: transform 0.28s cubic-bezier(0.34,1.56,0.64,1);
+      box-shadow: 0 24px 64px rgba(13,31,60,.38);
+      transform: translateY(24px) scale(.97);
+      transition: transform .28s cubic-bezier(.34,1.56,.64,1);
     }
     .modal-overlay.open .modal { transform: translateY(0) scale(1); }
 
     .modal-header {
-      background: var(--shield-gradient, linear-gradient(160deg,#0d1f3c,#1a3a5c));
-      padding: 26px 28px 22px;
-      position: relative;
+      background: linear-gradient(160deg,#0d1f3c,#1a3a5c);
+      padding: 26px 28px 22px; position: relative;
     }
     .modal-header::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background-image:
-        linear-gradient(rgba(0,201,177,0.07) 1px, transparent 1px),
-        linear-gradient(90deg,rgba(0,201,177,0.07) 1px,transparent 1px);
-      background-size: 28px 28px;
-      pointer-events: none;
+        linear-gradient(rgba(0,201,177,.07) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(0,201,177,.07) 1px,transparent 1px);
+      background-size: 28px 28px; pointer-events: none;
     }
-    .modal-curso-badge {
+    .modal-badge {
       display: inline-flex; align-items: center; gap: 6px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.66rem; font-weight: 800;
-      text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--cyan, #00c9b1);
-      background: rgba(0,201,177,0.15);
-      border: 1px solid rgba(0,201,177,0.35);
+      font-size: .66rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--cyan,#00c9b1);
+      background: rgba(0,201,177,.15);
+      border: 1px solid rgba(0,201,177,.35);
       padding: 4px 12px; border-radius: 20px;
       margin-bottom: 10px; position: relative;
     }
@@ -195,92 +169,78 @@
       color: #fff; line-height: 1.35; position: relative;
     }
     .modal-subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem; color: rgba(255,255,255,0.55);
+      font-size: .78rem; color: rgba(255,255,255,.55);
       margin-top: 6px; position: relative;
     }
     .modal-close {
       position: absolute; top: 14px; right: 14px;
       width: 30px; height: 30px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
       border-radius: 50%; cursor: pointer;
       color: #fff; font-size: 1rem;
       display: flex; align-items: center; justify-content: center;
-      transition: all var(--transition, 0.2s);
-      z-index: 1; padding: 0; line-height: 1;
+      transition: all .2s; z-index: 1; padding: 0; line-height: 1;
     }
-    .modal-close:hover { background: rgba(255,255,255,0.25); transform: rotate(90deg); }
+    .modal-close:hover { background: rgba(255,255,255,.25); transform: rotate(90deg); }
 
     .modal-body { padding: 24px 28px 28px; }
 
-    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 15px; }
-    .form-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.73rem; font-weight: 700;
-      color: var(--navy-deep, #0d1f3c);
-      letter-spacing: 0.04em; text-transform: uppercase;
+    .form-group  { display: flex; flex-direction: column; gap: 5px; margin-bottom: 15px; }
+    .form-label  {
+      font-size: .73rem; font-weight: 700;
+      color: var(--navy-deep,#0d1f3c);
+      letter-spacing: .04em; text-transform: uppercase;
     }
-    .form-label span { color: var(--seguranca, #c0392b); margin-left: 2px; }
+    .form-label span { color: #c0392b; margin-left: 2px; }
 
     .form-input {
       width: 100%; padding: 11px 13px;
-      border: 1.5px solid var(--gray-border, #ddd);
-      border-radius: var(--radius, 6px);
+      border: 1.5px solid var(--gray-border,#ddd);
+      border-radius: var(--radius,6px);
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.92rem; color: var(--text, #1a1a1a);
+      font-size: .92rem; color: var(--text,#1a1a1a);
       background: var(--white);
-      transition: all var(--transition, 0.2s);
-      outline: none; -webkit-appearance: none;
+      transition: all .2s; outline: none; -webkit-appearance: none;
     }
     .form-input:focus {
-      border-color: var(--cyan, #00c9b1);
-      box-shadow: 0 0 0 3px var(--cyan-glow, rgba(0,201,177,0.15));
+      border-color: var(--cyan,#00c9b1);
+      box-shadow: 0 0 0 3px rgba(0,201,177,.15);
     }
-    .form-input::placeholder { color: var(--text-muted, #888); }
+    .form-input::placeholder { color: var(--text-muted,#888); }
     .form-input.error {
-      border-color: var(--seguranca, #c0392b);
-      box-shadow: 0 0 0 3px rgba(192,57,43,0.1);
+      border-color: #c0392b;
+      box-shadow: 0 0 0 3px rgba(192,57,43,.1);
     }
 
     .field-error {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.71rem; font-weight: 600;
-      color: var(--seguranca, #c0392b);
-      display: none;
+      font-size: .71rem; font-weight: 600; color: #c0392b; display: none;
     }
     .field-error.show { display: block; }
 
-    /* Erro geral (falha de rede / API) */
+    /* Alerta de erro geral */
     .form-erro-geral {
       display: none;
-      background: #fdecea;
-      border: 1px solid #f5c2c0;
-      border-radius: 6px;
-      padding: 10px 13px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.78rem; color: #c0392b;
+      background: #fdecea; border: 1px solid #f5c2c0;
+      border-radius: 6px; padding: 10px 13px;
+      font-size: .78rem; color: #c0392b;
       margin-bottom: 14px; line-height: 1.55;
     }
     .form-erro-geral.show { display: block; }
 
     .modal-submit {
       width: 100%; justify-content: center;
-      font-size: 0.92rem; padding: 13px 24px;
+      font-size: .92rem; padding: 13px 24px;
       margin-top: 8px; cursor: pointer;
       display: flex; align-items: center; gap: 8px;
     }
-    .modal-submit:disabled {
-      opacity: 0.7; cursor: not-allowed;
-      transform: none !important; box-shadow: none !important;
-    }
+    .modal-submit:disabled { opacity: .7; cursor: not-allowed; transform: none !important; }
 
     .spinner {
       width: 15px; height: 15px;
-      border: 2px solid rgba(13,31,60,0.2);
-      border-top-color: var(--navy-deep, #0d1f3c);
-      border-radius: 50%;
-      animation: spin 0.6s linear infinite;
+      border: 2px solid rgba(13,31,60,.2);
+      border-top-color: #0d1f3c;
+      border-radius: 50%; animation: spin .6s linear infinite;
       flex-shrink: 0; display: inline-block;
     }
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -294,44 +254,42 @@
 
     .success-icon {
       width: 68px; height: 68px;
-      background: var(--cyan-glow, rgba(0,201,177,0.15));
-      border: 2px solid var(--cyan, #00c9b1);
+      background: rgba(0,201,177,.15);
+      border: 2px solid var(--cyan,#00c9b1);
       border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.9rem;
-      animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+      animation: popIn .4s cubic-bezier(.34,1.56,.64,1);
     }
-    @keyframes popIn { from { transform:scale(0.3); opacity:0; } to { transform:scale(1); opacity:1; } }
+    @keyframes popIn { from{transform:scale(.3);opacity:0} to{transform:scale(1);opacity:1} }
+
     .success-title {
       font-family: 'Source Serif 4', serif;
-      font-size: 1.2rem; font-weight: 700;
-      color: var(--navy-deep, #0d1f3c);
+      font-size: 1.2rem; font-weight: 700; color: #0d1f3c;
     }
     .success-desc {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem; color: var(--text-muted, #666);
+      font-size: .85rem; color: var(--text-muted,#666);
       line-height: 1.65; max-width: 300px;
     }
 
     .consent-text {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.71rem; color: var(--text-muted, #888);
+      font-size: .71rem; color: var(--text-muted,#888);
       line-height: 1.6;
       padding-top: 14px;
-      border-top: 1px solid var(--gray-border, #ddd);
+      border-top: 1px solid var(--gray-border,#ddd);
       margin-top: 4px;
     }
-    .consent-text a { color: var(--navy-mid, #1a3a5c); text-decoration: underline; }
+    .consent-text a { color: #0d1f3c; text-decoration: underline; }
 
     body.modal-open { overflow: hidden; }
 
     /* Modal responsivo — bottom sheet em mobile */
     @media (max-width: 520px) {
       .modal-overlay { align-items: flex-end; padding: 0; }
-      .modal { max-width: 100%; border-radius: 14px 14px 0 0; }
-      .modal-header { padding: 22px 20px 18px; }
-      .modal-body   { padding: 20px 20px 28px; }
-      .modal-title  { font-size: 1rem; }
+      .modal         { max-width: 100%; border-radius: 14px 14px 0 0; }
+      .modal-header  { padding: 22px 20px 18px; }
+      .modal-body    { padding: 20px 20px 28px; }
+      .modal-title   { font-size: 1rem; }
     }
   </style>
 </head>
@@ -375,7 +333,7 @@
     </div>
   </div>
 
-  <!-- CURSOS -->
+  <!-- ═══════ CURSOS ═══════ -->
   <section class="section">
     <div class="container">
 
@@ -554,11 +512,10 @@
        MODAL DE INSCRIÇÃO
   ══════════════════════════════════════════════════ -->
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal" id="modal">
-
+    <div class="modal">
       <div class="modal-header">
         <button class="modal-close" onclick="fecharModal()" aria-label="Fechar">✕</button>
-        <div class="modal-curso-badge" id="modalBadge"></div>
+        <div class="modal-badge" id="modalBadge"></div>
         <h2 class="modal-title" id="modalTitle"></h2>
         <p class="modal-subtitle">Preencha seus dados para garantir sua inscrição.</p>
       </div>
@@ -566,7 +523,6 @@
       <div class="modal-body">
         <div id="modalFormWrap">
 
-          <!-- Erro geral de rede / API -->
           <div class="form-erro-geral" id="erroGeral">
             ⚠️ Não foi possível enviar. Verifique sua conexão e tente novamente, ou
             envie um e-mail para <strong>adriano.israel@live.com</strong>.
@@ -574,20 +530,23 @@
 
           <div class="form-group">
             <label class="form-label" for="inputNome">Nome completo <span>*</span></label>
-            <input class="form-input" type="text" id="inputNome" placeholder="Seu nome completo" autocomplete="name" maxlength="120"/>
+            <input class="form-input" type="text" id="inputNome"
+              placeholder="Seu nome completo" autocomplete="name" maxlength="120"/>
             <span class="field-error" id="erroNome">Por favor, informe seu nome completo.</span>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="inputEmail">E-mail <span>*</span></label>
-            <input class="form-input" type="email" id="inputEmail" placeholder="seu@email.com" autocomplete="email" maxlength="254"/>
+            <input class="form-input" type="email" id="inputEmail"
+              placeholder="seu@email.com" autocomplete="email" maxlength="254"/>
             <span class="field-error" id="erroEmail">Informe um endereço de e-mail válido.</span>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="inputTelefone">Telefone / WhatsApp <span>*</span></label>
-            <input class="form-input" type="tel" id="inputTelefone" placeholder="(67) 9 9999-9999" autocomplete="tel" maxlength="20"/>
-            <span class="field-error" id="erroTelefone">Informe um número de telefone válido.</span>
+            <input class="form-input" type="tel" id="inputTelefone"
+              placeholder="(67) 9 9999-9999" autocomplete="tel" maxlength="20"/>
+            <span class="field-error" id="erroTelefone">Informe um número de telefone com DDD.</span>
           </div>
 
           <button class="btn btn-primary modal-submit" id="btnEnviar" onclick="enviarInscricao()">
@@ -595,9 +554,9 @@
           </button>
 
           <p class="consent-text">
-            🔒 Seus dados são usados somente para contato sobre este curso, em total conformidade com a
-            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">LGPD (Lei nº 13.709/2018)</a>.
-            Não compartilhamos suas informações com terceiros.
+            🔒 Seus dados são usados somente para contato sobre este curso, em conformidade com a
+            <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+               target="_blank" rel="noopener">LGPD (Lei nº 13.709/2018)</a>.
           </p>
         </div>
 
@@ -617,15 +576,26 @@
 
   <script src="../assets/js/script.js"></script>
   <script>
-    /* ═══════════════════════════════════════════════════════════
-       O HTML agora chama /api/inscricao — rota serverless do Vercel.
-       A URL do Apps Script fica em APPS_SCRIPT_URL no painel
-       do Vercel (Environment Variables) e NUNCA aparece no HTML.
-    ═══════════════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════════════════════════
+       ✅ CORREÇÃO PRINCIPAL
+       O build-env.js gera window.__ENV.CURSOS_SCRIPT_URL
+       O código anterior lia window.__ENV.APPS_SCRIPT_URL_CURSOS  ← ERRADO
+       Agora lemos o nome correto: window.__ENV.CURSOS_SCRIPT_URL ← CERTO
+    ═══════════════════════════════════════════════════════════════════ */
+    const APPS_SCRIPT_URL = (window.__ENV && window.__ENV.CURSOS_SCRIPT_URL) || '';
+
+    // Aviso no console para facilitar debug em desenvolvimento
+    if (!APPS_SCRIPT_URL) {
+      console.warn(
+        '[cursos.html] CURSOS_SCRIPT_URL não encontrada em window.__ENV.\n' +
+        'Verifique se env.js foi carregado e se a variável APPS_SCRIPT_CURSOS ' +
+        'está configurada no Vercel → Settings → Environment Variables.'
+      );
+    }
 
     let cursoAtual = '';
 
-    /* ── Máscara de telefone ─────────────────────────────────── */
+    /* ── Máscara de telefone ──────────────────────────────────────── */
     document.getElementById('inputTelefone').addEventListener('input', function () {
       let v = this.value.replace(/\D/g, '').slice(0, 11);
       if      (v.length === 11) v = v.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
@@ -635,24 +605,23 @@
       this.value = v;
     });
 
-    /* ── Abrir modal ─────────────────────────────────────────── */
+    /* ── Abrir modal ──────────────────────────────────────────────── */
     function abrirModal(curso, nivel, emoji) {
       cursoAtual = curso;
-      document.getElementById('modalTitle').textContent  = curso;
-      document.getElementById('modalBadge').textContent  = emoji + '  ' + nivel;
+      document.getElementById('modalTitle').textContent = curso;
+      document.getElementById('modalBadge').textContent = emoji + '  ' + nivel;
       resetarModal();
       document.getElementById('modalOverlay').classList.add('open');
       document.body.classList.add('modal-open');
       setTimeout(() => document.getElementById('inputNome').focus(), 220);
     }
 
-    /* ── Fechar modal ────────────────────────────────────────── */
+    /* ── Fechar modal ─────────────────────────────────────────────── */
     function fecharModal() {
       document.getElementById('modalOverlay').classList.remove('open');
       document.body.classList.remove('modal-open');
       setTimeout(resetarModal, 300);
     }
-
     document.getElementById('modalOverlay').addEventListener('click', e => {
       if (e.target === e.currentTarget) fecharModal();
     });
@@ -661,7 +630,7 @@
         fecharModal();
     });
 
-    /* ── Reset ───────────────────────────────────────────────── */
+    /* ── Reset ────────────────────────────────────────────────────── */
     function resetarModal() {
       ['inputNome','inputEmail','inputTelefone'].forEach(id => {
         const el = document.getElementById(id);
@@ -680,42 +649,48 @@
       if (btn)  { btn.disabled = false; btn.innerHTML = 'Confirmar inscrição'; }
     }
 
-    /* ── Validação ───────────────────────────────────────────── */
+    /* ── Validação ────────────────────────────────────────────────── */
     function validar() {
       let ok = true;
       const nome = document.getElementById('inputNome').value.trim();
       nome.length < 3
-        ? (erroField('inputNome','erroNome'),    ok = false)
-        : okField('inputNome','erroNome');
+        ? (setErro('inputNome','erroNome'),    ok = false)
+        : limpaErro('inputNome','erroNome');
 
       const email = document.getElementById('inputEmail').value.trim();
       !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-        ? (erroField('inputEmail','erroEmail'),  ok = false)
-        : okField('inputEmail','erroEmail');
+        ? (setErro('inputEmail','erroEmail'),  ok = false)
+        : limpaErro('inputEmail','erroEmail');
 
       const tel = document.getElementById('inputTelefone').value.replace(/\D/g,'');
       tel.length < 10
-        ? (erroField('inputTelefone','erroTelefone'), ok = false)
-        : okField('inputTelefone','erroTelefone');
+        ? (setErro('inputTelefone','erroTelefone'), ok = false)
+        : limpaErro('inputTelefone','erroTelefone');
 
       return ok;
     }
-    function erroField(i,e){ document.getElementById(i).classList.add('error');    document.getElementById(e).classList.add('show');    }
-    function okField(i,e)  { document.getElementById(i).classList.remove('error'); document.getElementById(e).classList.remove('show'); }
+    function setErro(i,e)  { document.getElementById(i).classList.add('error');    document.getElementById(e).classList.add('show');    }
+    function limpaErro(i,e){ document.getElementById(i).classList.remove('error'); document.getElementById(e).classList.remove('show'); }
 
-    /* ═══════════════════════════════════════════════════════════
-       ENVIO — chama a API Route do Vercel (/api/inscricao)
-       que lê process.env.APPS_SCRIPT_URL e repassa ao Apps Script.
-
-       Vantagens vs. a versão anterior:
-       ✅ A URL do Apps Script nunca aparece no HTML (segurança)
-       ✅ Usamos fetch normal com mode:'cors' — lemos a resposta
-       ✅ Sabemos se gravou ou não (não precisamos confiar no "silêncio")
-       ✅ Mensagem de erro real se algo falhar
-    ═══════════════════════════════════════════════════════════ */
+    /* ═══════════════════════════════════════════════════════════════════
+       ENVIO PARA O GOOGLE APPS SCRIPT
+       ─────────────────────────────────────────────────────────────────
+       Usa GET com parâmetros na query string → doGet(e) no Code.gs
+       mode:'no-cors' é necessário pois Apps Script não envia header
+       Access-Control-Allow-Origin na resposta.
+       O fetch não lança erro se o servidor responder — só lança se
+       houver falha de rede. Por isso consideramos sucesso após o fetch.
+    ═══════════════════════════════════════════════════════════════════ */
     async function enviarInscricao() {
       document.getElementById('erroGeral').classList.remove('show');
       if (!validar()) return;
+
+      // Bloqueia se a URL não foi gerada pelo build-env.js
+      if (!APPS_SCRIPT_URL) {
+        document.getElementById('erroGeral').classList.add('show');
+        console.error('[cursos.html] APPS_SCRIPT_URL vazia — verifique a variável APPS_SCRIPT_CURSOS no Vercel.');
+        return;
+      }
 
       const btn      = document.getElementById('btnEnviar');
       const nome     = document.getElementById('inputNome').value.trim();
@@ -726,24 +701,21 @@
       btn.disabled  = true;
       btn.innerHTML = '<span class="spinner"></span>&nbsp; Enviando...';
 
+      // Monta query string — lida pelo doGet(e) do Apps Script via e.parameter
+      const params  = new URLSearchParams({ nome, email, telefone, curso: cursoAtual, dataHora });
+      const urlFull = `${APPS_SCRIPT_URL}?${params.toString()}`;
+
       try {
-        const resp = await fetch('/api/inscricao', {
-          method : 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body   : JSON.stringify({ nome, email, telefone, curso: cursoAtual, dataHora })
-        });
+        await fetch(urlFull, { method: 'GET', mode: 'no-cors' });
 
-        const json = await resp.json();
-
-        if (json.resultado === 'ok') {
-          document.getElementById('modalFormWrap').style.display = 'none';
-          document.getElementById('modalSuccess').classList.add('show');
-        } else {
-          throw new Error(json.erro || 'Erro desconhecido na API.');
-        }
+        // Com no-cors não conseguimos ler a resposta, mas o Apps Script
+        // executa normalmente. Se chegou aqui sem lançar exceção = sucesso.
+        document.getElementById('modalFormWrap').style.display = 'none';
+        document.getElementById('modalSuccess').classList.add('show');
 
       } catch (err) {
-        console.error('[Modal] Erro no envio:', err.message);
+        // Só cai aqui em falha de rede real (offline, DNS, etc.)
+        console.error('[cursos.html] Erro no fetch:', err.message);
         btn.disabled  = false;
         btn.innerHTML = 'Confirmar inscrição';
         document.getElementById('erroGeral').classList.add('show');
